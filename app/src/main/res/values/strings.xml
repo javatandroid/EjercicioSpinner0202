@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">EjercicioSpinner0202</string>
+    <string name="textoTest">Tipo de test:</string>
+    <string name="tipo">Tipo Test</string>
+    <string name="Respuesta">Enviar respuesta</string>
+    <string name="Pregunta">¿A cuántos km/h podemos circular por una autovía?</string>
+    <string name="Preguntarepetida">Pregunta repetida</string>
+    <string name="Opción1">A 100km/h</string>
+    <string name="Opción2">A 50km/h</string>
+    <string name="Opción3">A 120km/h</string>
+</resources>

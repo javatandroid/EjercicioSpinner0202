@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.ejerciciospinner0202.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen50"
+        android:background="@color/colorCabecera"
+        android:orientation="horizontal"></LinearLayout>
+
+    <TextView
+        android:id="@+id/tvPreguntas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textoTest"
+        android:padding="@dimen/dimen10"/>
+
+    <Spinner
+        android:id="@+id/spTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnTipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/estiloBotones"
+            android:onClick="clickTipoTest"
+            android:text="@string/tipo" />
+
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/estiloBotones"
+            android:onClick="clickEnviarRespuesta"
+            android:enabled="false"
+            android:text="@string/Respuesta" />
+    </LinearLayout>
+
+    <TextView
+    android:id="@+id/textView3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dimen10"
+    android:text="@string/Pregunta"
+    android:textSize="@dimen/dimen20" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/rgTest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/rbopcion1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Opción1" />
+
+            <RadioButton
+                android:id="@+id/rbopcion2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Opción2" />
+
+            <RadioButton
+                android:id="@+id/rbopcion3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Opción3" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom">
+
+        <CheckBox
+            android:id="@+id/cbPregunta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBoton"
+            android:textSize="@dimen/dimen20"
+            android:text="@string/Preguntarepetida" />
+    </RelativeLayout>
+</LinearLayout>

@@ -52,6 +52,31 @@ public class MainActivity extends AppCompatActivity {
         }
 
     public void clickEnviarRespuesta(View view){
+        //Obtenemos la id del Radiobutton seleccionado dentro del radiogroup
+        int idRadio = rgRespuesta.getCheckedRadioButtonId();
 
+        if (idRadio == -1) {
+            Toast.makeText(this, "Debes de seleccionar una respuesta", Toast.LENGTH_SHORT).show();
+
+        }else{
+        //Creamos un objeto RadioButton desde la id obtenida
+        RadioButton radioButtonSeleccionado = (RadioButton)findViewById(idRadio);
+        //Del objeto Radiobutton creado obtenemos el texto del mismo
+        String textoRadioSeleccionado = radioButtonSeleccionado.getText().toString();
+        Toast.makeText(this, "Opción seleccionada "+textoRadioSeleccionado,Toast.LENGTH_SHORT).show();
+
+        //Comprobar si el checkbox está seleccionado
+            boolean esRepetida=false;
+
+            if(cbRepetida.isChecked()){
+                esRepetida=true;
+            }
+
+            if(esRepetida){
+                Toast.makeText(this, "Esta pregunta ya la has contestado", Toast.LENGTH_SHORT).show();
+            }else{
+                Toast.makeText(this, "Opción seleccionada"+textoRadioSeleccionado, Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }//FIN MAIN
